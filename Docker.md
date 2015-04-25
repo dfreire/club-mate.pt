@@ -26,7 +26,7 @@ docker build --tag club-mate .
 ```
 
 ```
-docker run -it --rm --publish 3000:3000 --volume `pwd`/club-mate:/club-mate club-mate /bin/bash; cd /club-mate
+docker run -it --rm --publish 3000:8000 --volume `pwd`/club-mate:/club-mate club-mate /bin/bash; cd /club-mate
 ```
 
 ## Export
