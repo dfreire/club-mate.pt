@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
+	<title>Club Mate</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
@@ -20,7 +20,14 @@
 </head>
 <body>
 
-	<p><a href="/">home</a> | <a href="/sobre-o-club-mate">sobre-o-club-mate</a></p>
+	<p>
+		<a href="/">Club Mate</a> |
+		<a href="/sobre-o-club-mate">Sobre o Club Mate</a> |
+		<a href="/yerba-mate">Yerba Mate</a> |
+		<a href="/cocktails">Cocktails</a> |
+		<a href="/onde-encontrar">Onde Encontrar</a> |
+		<a href="/contactos">Contactos</a> |
+	</p>
 
 	@yield('content')
 

@@ -14,11 +14,26 @@ class PagesController extends Controller {
 
 	public function sobre_o_club_mate()
 	{
-		$data = [
-			'first' => "Ivo",
-			'last' => "Freire",
-		];
-		return view('pages/sobre_o_club_mate', $data);
+		return view('pages/sobre_o_club_mate');
 	}
 
+	public function yerba_mate()
+	{
+		return view('pages/yerba_mate');
+	}
+
+	public function cocktails()
+	{
+		return view('pages/cocktails');
+	}
+
+	public function onde_encontrar()
+	{
+		return view('pages/onde_encontrar');
+	}
+
+	public function contactos()
+	{
+		return view('pages/contactos');
+	}
 }

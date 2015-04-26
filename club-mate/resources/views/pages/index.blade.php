@@ -1,5 +1,5 @@
-@extends('app')
+@extends('layout')
 
 @section('content')
-<h1>Home</h1>
+<h1>Club Mate</h1>
 @stop

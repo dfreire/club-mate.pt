@@ -24,7 +24,7 @@ Route::controllers([
 
 Route::get('/', 'PagesController@index');
 Route::get('sobre-o-club-mate', 'PagesController@sobre_o_club_mate');
-//Route::get('yerba-mate', 'PagesController@yerba_mate');
-//Route::get('cocktails, 'PagesController@cocktails');
-//Route::get('onde-encontrar, 'PagesController@onde_encontrar');
-//Route::get('contactos, 'PagesController@contactos');
+Route::get('yerba-mate', 'PagesController@yerba_mate');
+Route::get('cocktails', 'PagesController@cocktails');
+Route::get('onde-encontrar', 'PagesController@onde_encontrar');
+Route::get('contactos', 'PagesController@contactos');
