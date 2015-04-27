@@ -26,13 +26,13 @@
 		<a href="/yerba-mate">Yerba Mate</a> |
 		<a href="/cocktails">Cocktails</a> |
 		<a href="/onde-encontrar">Onde Encontrar</a> |
-		<a href="/contactos">Contactos</a> |
+		<a href="/contactos">Contactos</a>
 	</p>
 
 	@yield('content')
 
 	<!-- Scripts -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
