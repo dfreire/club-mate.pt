@@ -8,6 +8,7 @@ RUN apt-get install -y curl
 
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
 RUN apt-get install -y nodejs
+RUN npm install -g npm
 RUN npm install -g gulp
 
 RUN apt-get install -y php5-mcrypt
