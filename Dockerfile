@@ -4,6 +4,7 @@ MAINTAINER dfreire <dario.freire@gmail.com>
 
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y build-essential
+RUN apt-get install -y libnotify-bin
 RUN apt-get install -y curl
 
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
