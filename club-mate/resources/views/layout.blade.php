@@ -11,6 +11,8 @@
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -39,7 +41,9 @@
             <div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
-						<a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+						<h3 id="menu-toggle">
+							<span class="glyphicon glyphicon-menu-hamburger"></span>
+						</h3>
 					</div>
 				</div>
                 <div class="row">
