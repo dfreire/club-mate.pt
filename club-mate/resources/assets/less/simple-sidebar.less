@@ -6,8 +6,18 @@
 
 /* Toggle Styles */
 
+@font-face {
+  font-family: 'African';
+  src: url('/african.ttf') format('truetype');
+  background-color: #FDFDFD;
+}
+
+@my-body-bg-color: #FFF;
 @my-transition: all 0.10s ease;
-@my-sidebar-bg-color: #F5A437;
+@my-sidebar-bg-color: #F5EACD; //#F5EACD; //#F5F5F5; //#FED418;
+@my-sidebar-bg-hover: #FFF; //rgba(255,255,255,0.8);
+@my-sidebar-font-color: #000; //#00148D;//#004297;
+
 
 #wrapper {
     padding-left: 0;
@@ -54,7 +64,7 @@
 /* Sidebar Styles */
 
 .sidebar-nav {
-    position: absolute;
+    //position: absolute;
     top: 0;
     width: 250px;
     margin: 0;
@@ -70,13 +80,13 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: @my-sidebar-font-color;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
+    //color: #fff;
+    background: @my-sidebar-bg-hover;
 }
 
 .sidebar-nav li a:active,
@@ -85,18 +95,20 @@
 }
 
 .sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
+    //height: 65px;
+    //font-size: 18px;
+    //line-height: 60px;
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999999;
+    //color: #999999;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
+    //color: #fff;
+    background: @my-sidebar-bg-hover;  //background: none;
 }
 
 @media(min-width:768px) {

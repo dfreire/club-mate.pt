@@ -6232,6 +6232,11 @@ button.close {
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 /* Toggle Styles */
+@font-face {
+  font-family: 'African';
+  src: url('/african.ttf') format('truetype');
+  background-color: #FDFDFD;
+}
 #wrapper {
   padding-left: 0;
   transition: all 0.1s ease;
@@ -6247,7 +6252,7 @@ button.close {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #f5a437;
+  background: #f5eacd;
   transition: all 0.1s ease;
 }
 #wrapper.toggled #sidebar-wrapper {
@@ -6264,7 +6269,6 @@ button.close {
 }
 /* Sidebar Styles */
 .sidebar-nav {
-  position: absolute;
   top: 0;
   width: 250px;
   margin: 0;
@@ -6278,28 +6282,22 @@ button.close {
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #999999;
+  color: #000000;
 }
 .sidebar-nav li a:hover {
   text-decoration: none;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.2);
+  background: #ffffff;
 }
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
   text-decoration: none;
 }
-.sidebar-nav > .sidebar-brand {
-  height: 65px;
-  font-size: 18px;
-  line-height: 60px;
-}
 .sidebar-nav > .sidebar-brand a {
-  color: #999999;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
-  background: none;
+  background: #ffffff;
 }
 @media (min-width: 768px) {
   #wrapper {
@@ -6323,6 +6321,9 @@ button.close {
     margin-right: 0;
   }
 }
+body {
+  background-color: #ffffff;
+}
 body,
 label,
 .checkbox label {
@@ -6332,12 +6333,34 @@ label,
   content: "\e236";
 }
 #menu-toggle {
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: black;
   text-decoration: none;
 }
 a:hover#menu-toggle {
-  color: #f5a437;
+  color: rgba(0, 0, 0, 0.6);
+}
+.my-contact-wrapper {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+.my-contact {
+  font-size: 0.9em;
+  font-weight: 400px;
+}
+ul.my-social-contacts-wrapper {
+  padding-left: 20px;
+  list-style: none;
+}
+ul.my-social-contacts-wrapper li {
+  display: inline;
+  font-size: 1.5em;
+  padding-right: 5px;
+}
+ul.my-social-contacts-wrapper li a {
+  text-decoration: none;
+  color: #000;
 }
 
 /*# sourceMappingURL=app.css.map */
