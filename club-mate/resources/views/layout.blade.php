@@ -45,6 +45,7 @@
 					<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
 					<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
 					<li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+					<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
 				</ul>
 			</div>
         </div><!-- /#sidebar-wrapper -->
@@ -53,7 +54,7 @@
             <div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
-						<a href="#"><i id="menu-toggle" class="fa"></i></a>
+						<a href="#" id="menu-toggle" class="fa"></a>
 					</div>
 				</div>
                 <div class="row">
