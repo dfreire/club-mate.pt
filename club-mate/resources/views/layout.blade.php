@@ -54,7 +54,7 @@
             <div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
-						<a href="#" id="menu-toggle" class="fa"></a>
+						<a href="#" id="menu-toggle" class="fa">&nbsp;</a>
 					</div>
 				</div>
                 <div class="row">
