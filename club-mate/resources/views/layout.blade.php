@@ -44,7 +44,7 @@
             <div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-12">
-						<a id="menu-toggle" class="glyphicon" href="#"></a>
+						<a id="menu-toggle" class="glyphicon" href="#">&nbsp;</a>
 					</div>
 				</div>
                 <div class="row">
@@ -65,20 +65,19 @@
 
 	<!-- Menu Toggle Script -->
 	<script>
-	function toggle() {
-		var isToggled = $("#wrapper").hasClass("toggled");
-		console.warn("isToggled: " + isToggled);
-		$("#menu-toggle").toggleClass("glyphicon-remove", !isToggled);
-		console.warn("glyphicon-remove: " + $("#menu-toggle").hasClass("glyphicon-remove"));
-		$("#menu-toggle").toggleClass("glyphicon-menu-hamburger", isToggled);
-		console.warn("glyphicon-ok: " + $("#menu-toggle").hasClass("glyphicon-menu-hamburger"));
-	}
 	$("#menu-toggle").click(function(e) {
 		e.preventDefault();
 		$("#wrapper").toggleClass("toggled");
-		toggle();
+		$("#menu-toggle").toggleClass("glyphicon-remove");
+		$("#menu-toggle").toggleClass("glyphicon-menu-hamburger");
 	});
-	$( toggle );
+	function onResize() {
+		var isSidebarHidden = $(document).width() < 768;
+		$("#menu-toggle").toggleClass("glyphicon-remove", !isSidebarHidden);
+		$("#menu-toggle").toggleClass("glyphicon-menu-hamburger", isSidebarHidden);
+	}
+	$(window).resize(onResize);
+	$(onResize);
 	</script>
 
 </body>
