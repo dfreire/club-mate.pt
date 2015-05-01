@@ -6226,11 +6226,6 @@ button.close {
     display: none !important;
   }
 }
-body,
-label,
-.checkbox label {
-  font-weight: 600;
-}
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -6239,7 +6234,7 @@ label,
 /* Toggle Styles */
 #wrapper {
   padding-left: 0;
-  transition: all 0.5s ease;
+  transition: all 0.1s ease;
 }
 #wrapper.toggled {
   padding-left: 250px;
@@ -6252,8 +6247,8 @@ label,
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #000;
-  transition: all 0.5s ease;
+  background: #f5a437;
+  transition: all 0.1s ease;
 }
 #wrapper.toggled #sidebar-wrapper {
   width: 250px;
@@ -6327,6 +6322,22 @@ label,
     position: relative;
     margin-right: 0;
   }
+}
+body,
+label,
+.checkbox label {
+  font-weight: 600;
+}
+.glyphicon-menu-hamburger:before {
+  content: "\e236";
+}
+#menu-toggle {
+  font-size: 1.5em;
+  color: black;
+  text-decoration: none;
+}
+a:hover#menu-toggle {
+  color: #f5a437;
 }
 
 /*# sourceMappingURL=app.css.map */
