@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Club Mate</title>
 
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
 	<!-- Fonts -->
