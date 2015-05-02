@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Club Mate</title>
+	<title>Club-Mate Portugal</title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
@@ -32,7 +32,7 @@
 	                <li class="sidebar-brand">
 						<a href="/"><img src="/club-mate-logo.png" /></a>
 	                </li>
-	                <li><a href="/sobre-o-club-mate">Sobre o Club Mate</a></li>
+	                <li><a href="/sobre-o-club-mate">Sobre o Club-Mate</a></li>
 	                <li><a href="/yerba-mate">Yerba Mate</a></li>
 	                <li><a href="/cocktails">Cocktails</a></li>
 	                <li><a href="/onde-encontrar">Onde Encontrar</a></li>
