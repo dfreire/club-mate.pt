@@ -92,5 +92,7 @@
 	$(onResize);
 	</script>
 
+	@yield('scripts')
+
 </body>
 </html>
