@@ -1,8 +1,10 @@
 @extends('layout')
 
 @section('scriptsEndHead')
+<!--
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script>
-<!-- <script src="//maps.googleapis.com/maps/api/js?v=3.19&amp;signed_in=true"></script> -->
+-->
+<script src="//maps.googleapis.com/maps/api/js?v=3.19&amp;signed_in=true"></script>
 <script type="text/javascript">
 function initialize() {
     var mapOptions = {
