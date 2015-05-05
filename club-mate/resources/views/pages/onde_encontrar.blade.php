@@ -1,10 +1,7 @@
 @extends('layout')
 
 @section('scriptsEndHead')
-<!--
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script>
--->
-<script src="//maps.googleapis.com/maps/api/js?v=3.19&amp;signed_in=true"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCml3WiJ1_Idu3CXluCDbXHFh366CaJVlQ"></script>
 <script type="text/javascript">
 function initialize() {
     var mapOptions = {
@@ -28,4 +25,15 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <div id="map-canvas"></div>
     </div>
 </div>
+@stop
+
+@section('scriptsEndBody')
+<script type="text/javascript">
+$(window).resize(function () {
+    var h = $(window).height(),
+        offsetTop = 150; // Calculate the top offset
+
+    $('#map-canvas').css('height', (h - offsetTop));
+}).resize();
+</script>
 @stop
