@@ -2714,7 +2714,7 @@ select[multiple].form-group-lg .form-control {
 .btn {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: 300;
+  font-weight: normal;
   text-align: center;
   vertical-align: middle;
   -ms-touch-action: manipulation;
@@ -6323,11 +6323,6 @@ button.close {
 }
 body {
   background-color: #ffffff;
-}
-body,
-label,
-.checkbox label {
-  font-weight: 600;
 }
 #menu-toggle {
   font-size: 1.5em;
