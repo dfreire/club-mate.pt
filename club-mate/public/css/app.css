@@ -6232,11 +6232,6 @@ button.close {
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 /* Toggle Styles */
-@font-face {
-  font-family: 'African';
-  src: url('/african.ttf') format('truetype');
-  background-color: #FDFDFD;
-}
 #wrapper {
   padding-left: 0;
   transition: all 0.1s ease;
@@ -6339,7 +6334,6 @@ a:hover#menu-toggle {
 }
 .my-contact {
   font-size: 0.9em;
-  font-weight: 350px;
 }
 ul.my-social-contacts-wrapper {
   padding-left: 20px;

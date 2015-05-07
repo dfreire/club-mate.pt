@@ -4,7 +4,6 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCml3WiJ1_Idu3CXluCDbXHFh366CaJVlQ"></script>
 <script type="text/javascript">
 function initialize() {
-
     var mapOptions = {
         center: new google.maps.LatLng(39.6833333,-8.1166667),
         zoom: 6
