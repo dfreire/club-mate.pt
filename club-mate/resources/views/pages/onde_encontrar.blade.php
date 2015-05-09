@@ -4,30 +4,27 @@
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCml3WiJ1_Idu3CXluCDbXHFh366CaJVlQ"></script>
 <script type="text/javascript">
 function initialize() {
-    var mapOptions = {
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
         center: new google.maps.LatLng(39.6833333,-8.1166667),
         zoom: 6
-    };
-    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    var icon = "/club-mate-marker.png";
+    });
 
-    function createMarker(position, title) {
+    function createMarker(lat, lon, id) {
         var marker = new google.maps.Marker({
             map: map,
-            icon: icon,
-            position: position,
-            title: title
+            icon: "/club-mate-marker.png",
+            position: new google.maps.LatLng(lat, lon)
         });
 
         google.maps.event.addListener(marker, 'click', function() {
             new google.maps.InfoWindow({
-                content: title
+                content: $(id).html()
             }).open(map, marker);
         });
     }
 
-    createMarker(new google.maps.LatLng(41.148056, -8.642722), "Restaurante Casa D'Oro");
-    createMarker(new google.maps.LatLng(38.7159764,-9.1467839), "Restaurante Pizza à Pezzi");
+    createMarker(41.148056, -8.642722, "#casa-d-oro");
+    createMarker(38.7159764, -9.1467839, "#pizza-a-pezzi");
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
