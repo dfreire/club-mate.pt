@@ -11,12 +11,11 @@ var Container = React.createClass({
     render: function() {
         return (
             <div>
-                <Link to="/">Home</Link> |
-                <Link to="/sobre-o-club-mate">Sobre o Club-Mate</Link> |
-                <Link to="/yerba-mate">Yerba Mate</Link> |
-                <Link to="/cocktails">Cocktails</Link> |
-                <Link to="/onde-encontrar">Onde Encontrar</Link> |
-                <Link to="/contactos">Contactos</Link> |
+                <Link to="/sobre-o-club-mate">Sobre o Club-Mate</Link>&nbsp;|&nbsp;
+                <Link to="/yerba-mate">Yerba Mate</Link>&nbsp;|&nbsp;
+                <Link to="/cocktails">Cocktails</Link>&nbsp;|&nbsp;
+                <Link to="/onde-encontrar">Onde Encontrar</Link>&nbsp;|&nbsp;
+                <Link to="/contactos">Contactos</Link>
                 <div className="container">
                     <RouteHandler/>
                 </div>
@@ -33,8 +32,7 @@ var Lang = React.createClass({
 
 var routes = (
     <Route handler={Container} path="/">
-        <Redirect from="/" to="/home" />
-        <Route name="home"           path="/home"               handler={Home} />
+        <Redirect from="/" to="/sobre-o-club-mate" />
         <Route name="about"          path="/sobre-o-club-mate"  handler={About} />
         <Route name="yerba-mate"     path="/yerba-mate"         handler={YerbaMate} />
         <Route name="cocktails"      path="/cocktails"          handler={Cocktails} />
