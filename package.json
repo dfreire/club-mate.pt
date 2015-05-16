@@ -1,0 +1,11 @@
+{
+	"name": "club-mate.pt",
+	"version": "0.0.1",
+	"devDependencies": {
+		"gulp": "*",
+		"gulp-babel": "*",
+		"gulp-sass": "*",
+		"gulp-cached": "*",
+		"gulp-watch": "*"
+	}
+}

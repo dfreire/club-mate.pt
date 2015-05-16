@@ -6,7 +6,8 @@ import (
 
 func main() {
 	e := echo.New()
-	e.Index("public/index.html")
-	e.Static("/static", "/")
+	e.Static("/", "public")
+	e.ServeFile("/en/:whatever", "public/index.html")
+	e.ServeFile("/pt/:whatever", "public/index.html")
 	e.Run(":3000")
 }
