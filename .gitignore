@@ -1,6 +1,5 @@
 .DS_Store
 **.swo
 **.swp
-/_ignore/
 /public/
 /node_modules/
