@@ -1,14 +1,8 @@
-import '../scss/main.scss'; 
+import '../scss/main.scss';
 
 import React from "react/addons";
-
 import Router from "react-router";
-var Route = Router.Route;
-var RouteHandler = Router.RouteHandler;
-var DefaultRoute = Router.DefaultRoute;
-var NotFoundRoute = Router.NotFoundRoute;
-var Redirect = Router.Redirect;
-var Link = Router.Link;
+import { DefaultRoute, Link, NotFoundRoute, Redirect , Route, RouteHandler} from 'react-router';
 
 import {SideBar} from "./sidebar.jsx";
 import {SideBarControl} from "./sidebarcontrol.jsx";
