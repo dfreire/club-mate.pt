@@ -1,0 +1,12 @@
+{
+    "name": "club-mate.pt",
+    "version": "0.0.1",
+    "dependencies": {
+        "jquery": "*",
+        "bootstrap": "*",
+        "fontawesome": "*"
+    },
+    "devDependencies": {
+
+    }
+}
