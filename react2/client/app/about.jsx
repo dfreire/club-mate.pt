@@ -1,5 +1,5 @@
-import {React} from 'react/addons';
-import {Router, Route, RouteHandler, DefaultRoute, NotFoundRoute, Redirect, Link} from "react-router"
+import React from "react/addons";
+import Router from "react-router";
 
 export var About = React.createClass({
     mixins: [Router.State],
