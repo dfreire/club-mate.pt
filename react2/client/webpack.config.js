@@ -11,6 +11,9 @@ var config = {
 		loaders: [{
 			test: /\.jsx?$/,
 			loaders: ['babel']
+		}, {
+			test: /\.scss$/,
+			loader: 'style!css!sass'
 		}]
 	}
 };

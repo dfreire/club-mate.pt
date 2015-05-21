@@ -1,0 +1,41 @@
+@import 'simple-sidebar';
+
+body {
+	background-color: $my-body-bg-color;
+}
+
+#menu-toggle {
+	font-size: 1.5em;
+	color:	black;
+	text-decoration: none;
+}
+
+a:hover#menu-toggle {
+	color: rgba(0,0,0,0.6); //$my-sidebar-bg-color;
+}
+
+.my-contact-wrapper {
+	padding-top: 20px;
+	padding-left:20px;
+	padding-bottom: 5px;
+}
+
+.my-contact {
+	font-size: 0.9em;
+}
+
+ul.my-social-contacts-wrapper {
+	padding-left:20px;
+	list-style: none;
+}
+
+ul.my-social-contacts-wrapper li {
+	display: inline;
+	font-size: 1.5em;
+	padding-right: 5px;
+}
+
+ul.my-social-contacts-wrapper li a {
+	text-decoration: none;
+	color: #000;
+}

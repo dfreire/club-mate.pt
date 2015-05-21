@@ -11,6 +11,9 @@
         "react-google-maps": "*"
     },
     "devDependencies": {
-        "babel-loader": "*"
+        "babel-loader": "*",
+        "style-loader": "*",
+        "css-loader": "*",
+        "sass-loader": "*"
     }
 }
