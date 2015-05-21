@@ -1,10 +1,9 @@
 import React from "react/addons";
 import {GoogleMaps} from "react-google-maps";
 
-class SimpleMap extends React.Component {
+class Map extends React.Component {
 
     render () {
-        console.log("render map");
         const {props, state} = this,
         {googleMapsApi, otherProps} = props;
 
@@ -16,11 +15,11 @@ class SimpleMap extends React.Component {
                     },
                 }}
                 googleMapsApi={google.maps}
-                zoom={8}
+                zoom={3}
                 center={{lat: -34.397, lng: 150.644}} />
         );
     }
 
 }
 
-export default SimpleMap;
+export default Map;
