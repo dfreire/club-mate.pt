@@ -1,4 +1,4 @@
 import React from 'react/addons';
-import About from './about.jsx';
+import Map from './map.jsx';
 
-React.render(<About />, document.getElementById('app'));
+React.render(<Map />, document.getElementById('app'));
