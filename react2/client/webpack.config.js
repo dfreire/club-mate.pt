@@ -1,5 +1,4 @@
 var path = require('path');
-var node_modules_dir = path.join(__dirname, 'node_modules');
 
 var config = {
 	entry: ['webpack/hot/dev-server', './app/main.jsx'],

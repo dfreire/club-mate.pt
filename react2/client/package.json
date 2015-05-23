@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "scripts": {
         "build": "webpack",
+        "dist": "webpack -p",
         "serve": "webpack-dev-server --devtool eval --progress --colors --hot --content-base public --port 3000"
     },
     "dependencies": {
