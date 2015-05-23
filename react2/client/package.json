@@ -9,6 +9,7 @@
     "dependencies": {
         "react": "*",
         "react-router": "*",
+        "classnames": "*",
         "react-google-maps": "*"
     },
     "devDependencies": {
