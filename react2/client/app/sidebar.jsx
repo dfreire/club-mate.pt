@@ -2,16 +2,12 @@ import React from "react/addons";
 import Router from "react-router";
 var Link = Router.Link;
 
-var style = {
-  backgroundColor: '#EEE'
-};
-
 export var SideBar = React.createClass({
     mixins: [Router.State],
 
     render: function() {
         return (
-            <div id="sidebar-wrapper" style={style}>
+            <div id="sidebar-wrapper">
                 <div>
                     <ul className="sidebar-nav">
                         <li className="sidebar-brand"><img src="/img/club-mate-logo.png" /></li>

@@ -3,6 +3,7 @@ import '../scss/main.scss';
 import React from "react/addons";
 import Router from "react-router";
 import { DefaultRoute, Link, NotFoundRoute, Redirect , Route, RouteHandler} from 'react-router';
+import ClassNames from "classnames";
 
 import {SideBar} from "./sidebar.jsx";
 import {SideBarControl} from "./sidebarcontrol.jsx";
@@ -12,10 +13,38 @@ import {Cocktails} from "./cocktails.jsx";
 import {WhereToFind} from "./where-to-find.jsx";
 import {Contacts} from "./contacts.jsx";
 
+var subscription;
+
 var Container = React.createClass({
+
+    getInitialState: function() {
+        return {
+            visible: undefined
+        }
+    },
+
+    componentDidMount: function() {
+        var that = this;
+        subscription = postal.channel("sidebar").subscribe("sidebar.visible", function(data) {
+            that.setState({ visible: data.visible });
+        });
+    },
+
+    componentWillUnmount: function() {
+        postal.channel("sidebar").unsubscribe(subscription);
+    },
+
+    getWrapperClassNames: function () {
+        if (this.state.visible) {
+            return ClassNames('toggled');
+        } else {
+            return ClassNames('');
+        }
+    },
+
     render: function() {
         return (
-            <div id="wrapper">
+            <div className={this.getWrapperClassNames()} id="wrapper">
                 <SideBar />
                 <div id="page-content-wrapper">
                     <div className="container-fluid">

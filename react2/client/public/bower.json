@@ -2,11 +2,11 @@
     "name": "club-mate.pt",
     "version": "0.0.1",
     "dependencies": {
+        "lodash": "*",
         "jquery": "*",
         "bootstrap": "*",
-        "fontawesome": "*"
+        "fontawesome": "*",
+        "postal": "*"
     },
-    "devDependencies": {
-
-    }
+    "devDependencies": {}
 }

@@ -1,6 +1,6 @@
 import React from "react/addons";
 import Router from "react-router";
-import classNames from "classnames";
+import ClassNames from "classnames";
 
 export var SideBarControl = React.createClass({
     mixins: [Router.State],
@@ -12,22 +12,22 @@ export var SideBarControl = React.createClass({
     },
 
     render: function() {
-        console.warn("visible: ", this.state.visible);
         return (
-            <a className={this.getClassName()} onClick={this.handleClick} href="#" id="menu-toggle">&nbsp;</a>
+            <a className={this.getClassNames()} onClick={this.handleClick} href="#" id="menu-toggle">&nbsp;</a>
         );
     },
 
-    getClassName: function () {
+    getClassNames: function () {
         if (this.state.visible) {
-            return classNames('fa', 'fa-times');
+            return ClassNames('fa', 'fa-times');
         } else {
-            return classNames('fa', 'fa-bars');
+            return ClassNames('fa', 'fa-bars');
         }
     },
 
     handleClick: function(e) {
         e.preventDefault();
         this.setState({ visible: !this.state.visible });
+        postal.channel("sidebar").publish("sidebar.visible", { visible: this.state.visible });
     }
 });
