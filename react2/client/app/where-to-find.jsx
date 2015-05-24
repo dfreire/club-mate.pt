@@ -1,9 +1,11 @@
 import React from "react/addons";
 import Router from "react-router";
 
+import Map from "./map.jsx";
+
 function createMap() {
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        center: new google.maps.LatLng(39.6833333,-8.1166667),
+        center: new google.maps.LatLng(),
         zoom: 6
     });
     createMarker(map, 41.148056, -8.642722, "#casa-d-oro");
@@ -42,16 +44,10 @@ export var WhereToFind = React.createClass({
 
     componentDidMount: function() {
         console.warn("componentDidMount");
-        setTimeout(function() {
-            createMap();
-            onWindowResize();
-            $(window).resize(onWindowResize);
-        }, 0);
     },
 
     componentWillUnmount: function() {
         console.warn("componentWillUnmount");
-        $(window).off("resize");
     },
 
     render: function() {
@@ -64,7 +60,7 @@ export var WhereToFind = React.createClass({
                 </div>
                 <div className="row">
                     <div className="col-lg-8">
-                        <div id="map-canvas"></div>
+                        <Map />
                     </div>
                     <div className="col-lg-4">
                         <div id="casa-d-oro">

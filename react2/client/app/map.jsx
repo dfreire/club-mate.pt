@@ -11,12 +11,12 @@ class Map extends React.Component {
             <GoogleMaps containerProps={{
                     otherProps,
                     style: {
-                        height: "300px",
+                        height: "500px",
                     },
                 }}
                 googleMapsApi={google.maps}
-                zoom={3}
-                center={{lat: -34.397, lng: 150.644}} />
+                zoom={6}
+                center={{lat: 39.6833333, lng: -8.1166667}} />
         );
     }
 

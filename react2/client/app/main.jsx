@@ -50,7 +50,7 @@ var Container = React.createClass({
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-lg-12">
-                                <SideBarControl />
+                                <SideBarControl ref="sideBarControl" />
                             </div>
                         </div>
                         <div className="row">
