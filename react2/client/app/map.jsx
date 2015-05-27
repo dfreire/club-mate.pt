@@ -8,7 +8,6 @@ class Map extends React.Component {
         this.state = { zoom: 6, marks: [], markWithInfo: undefined };
         this.state.marks.push({ position: { lat: 41.148056,  lng: -8.642722  }, key: "casa-d-oro" });
         this.state.marks.push({ position: { lat: 38.7159764, lng: -9.1467839 }, key: "pizza-a-pezzi" });
-        //this.state.markWithInfo = this.state.marks[0];
     }
 
     _handleMarkerClick(mark) {
