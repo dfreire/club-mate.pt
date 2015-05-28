@@ -3,28 +3,21 @@ import Router from "react-router";
 
 import Map from "./map.jsx";
 
-function createMap() {
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        center: new google.maps.LatLng(),
-        zoom: 6
-    });
-    createMarker(map, 41.148056, -8.642722, "#casa-d-oro");
-    createMarker(map, 38.7159764, -9.1467839, "#pizza-a-pezzi");
-}
-
-function createMarker(map, lat, lon, id) {
-    var marker = new google.maps.Marker({
-        map: map,
-        icon: "/img/club-mate-marker.png",
-        position: new google.maps.LatLng(lat, lon)
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-        new google.maps.InfoWindow({
-            content: $(id).html()
-        }).open(map, marker);
-    });
-}
+var Restaurants = [{
+    name: "Restaurante Casa D'Oro",
+    addressLine1: "Rua do Ouro, Nº797",
+    addressLine2: "4150 Porto",
+    position: {
+        lat: 41.148056, lng: -8.642722
+    }
+}, {
+    name: "Restaurante Pizza à Pezzi",
+    addressLine1: "Rua Dom Pedro V, Nº84 (Príncipe Real)",
+    addressLine2: "1250-001 Lisboa",
+    position: {
+        lat: 38.7159764, lng: -9.1467839
+    }
+}];
 
 function onWindowResize() {
     var h = $(window).height(),
@@ -63,22 +56,20 @@ export var WhereToFind = React.createClass({
                         <Map />
                     </div>
                     <div className="col-lg-4">
-                        <div id="casa-d-oro">
-                            <address>
-                                <strong>Restaurante Casa D'Oro</strong><br/>
-                                Rua do Ouro, Nº797<br/>
-                                4150 Porto<br/>
-                                <a href="https://www.google.pt/maps/@41.148056,-8.642722,20z">41.148056, -8.642722</a><br/>
-                            </address>
-                        </div>
-                        <div id="pizza-a-pezzi">
-                            <address>
-                                <strong>Restaurante Pizza à Pezzi</strong><br/>
-                                Rua Dom Pedro V, Nº84 (Príncipe Real)<br/>
-                                1250-001 Lisboa<br/>
-                                <a href="https://www.google.pt/maps/@38.7159764,-9.1467839,20z">38.7159764, -9.1467839</a><br/>
-                            </address>
-                        </div>
+                        {Restaurants.map(function(restaurant, index) {
+                            var gmapsCaption = restaurant.position.lat + "," + restaurant.position.lng;
+                            var gmapsHref = "https://www.google.pt/maps/@" + gmapsCaption + ",20z";
+                            return (
+                                <div>
+                                    <address>
+                                        <strong>{restaurant.name}</strong><br />
+                                        {restaurant.addressLine1}<br />
+                                        {restaurant.addressLine2}<br />
+                                        <a href={gmapsHref}>{gmapsCaption}</a><br />
+                                    </address>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
