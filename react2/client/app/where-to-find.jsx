@@ -19,29 +19,9 @@ var Restaurants = [{
     }
 }];
 
-function onWindowResize() {
-    var h = $(window).height(),
-        offsetTop = 150, // Calculate the top offset
-        marginBotton = 30;
-
-    $('#map-canvas').css('height', (h - offsetTop - marginBotton)).css('margin-bottom', marginBotton);
-}
 
 export var WhereToFind = React.createClass({
     mixins: [Router.State],
-
-    getInitialState: function() {
-        console.warn("getInitialState");
-        return {};
-    },
-
-    componentDidMount: function() {
-        console.warn("componentDidMount");
-    },
-
-    componentWillUnmount: function() {
-        console.warn("componentWillUnmount");
-    },
 
     render: function() {
         return (
