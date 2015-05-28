@@ -19,6 +19,20 @@ var Restaurants = [{
     }
 }];
 
+function getRestaurantHtml(restaurant) {
+    var gmapsCaption = restaurant.position.lat + ", " + restaurant.position.lng;
+    var gmapsHref = "https://www.google.pt/maps/@" + restaurant.position.lat + "," + restaurant.position.lng + ",20z";
+    return (
+        <div>
+            <address>
+                <strong>{restaurant.name}</strong><br />
+                {restaurant.addressLine1}<br />
+                {restaurant.addressLine2}<br />
+                <a href={gmapsHref}>{gmapsCaption}</a><br />
+            </address>
+        </div>
+    );
+}
 
 export var WhereToFind = React.createClass({
     mixins: [Router.State],
@@ -33,22 +47,11 @@ export var WhereToFind = React.createClass({
                 </div>
                 <div className="row">
                     <div className="col-lg-8">
-                        <Map />
+                        <Map marks={Restaurants}/>
                     </div>
                     <div className="col-lg-4">
                         {Restaurants.map(function(restaurant, index) {
-                            var gmapsCaption = restaurant.position.lat + ", " + restaurant.position.lng;
-                            var gmapsHref = "https://www.google.pt/maps/@" + restaurant.position.lat + "," + restaurant.position.lng + ",20z";
-                            return (
-                                <div>
-                                    <address>
-                                        <strong>{restaurant.name}</strong><br />
-                                        {restaurant.addressLine1}<br />
-                                        {restaurant.addressLine2}<br />
-                                        <a href={gmapsHref}>{gmapsCaption}</a><br />
-                                    </address>
-                                </div>
-                            );
+                            return getRestaurantHtml(restaurant);
                         })}
                     </div>
                 </div>
