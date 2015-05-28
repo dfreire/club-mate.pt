@@ -36,7 +36,7 @@ class Map extends React.Component {
                             position={mark.position}
                             onClick={function() { that._handleMarkerClick(mark); }}
                             icon="/img/club-mate-marker.png">;
-                                <InfoWindow position={mark.position} content="hello" />
+                                <InfoWindow position={mark.position} content={$("#"+mark.key).html()} />
                         </Marker>
                     } else {
                         return <Marker

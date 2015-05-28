@@ -4,6 +4,7 @@ import Router from "react-router";
 import Map from "./map.jsx";
 
 var Restaurants = [{
+    key: "casadoro",
     name: "Restaurante Casa D'Oro",
     addressLine1: "Rua do Ouro, Nº797",
     addressLine2: "4150 Porto",
@@ -11,6 +12,7 @@ var Restaurants = [{
         lat: 41.148056, lng: -8.642722
     }
 }, {
+    key: "pizzaapezzi",
     name: "Restaurante Pizza à Pezzi",
     addressLine1: "Rua Dom Pedro V, Nº84 (Príncipe Real)",
     addressLine2: "1250-001 Lisboa",
@@ -19,20 +21,20 @@ var Restaurants = [{
     }
 }];
 
-function getRestaurantHtml(restaurant) {
+_.each(Restaurants, function(restaurant) {
     var gmapsCaption = restaurant.position.lat + ", " + restaurant.position.lng;
     var gmapsHref = "https://www.google.pt/maps/@" + restaurant.position.lat + "," + restaurant.position.lng + ",20z";
-    return (
+    restaurant.content = (
         <div>
-            <address>
+            <address id={restaurant.key}>
                 <strong>{restaurant.name}</strong><br />
-                {restaurant.addressLine1}<br />
+                <small>{restaurant.addressLine1}<br />
                 {restaurant.addressLine2}<br />
-                <a href={gmapsHref}>{gmapsCaption}</a><br />
+                <a href={gmapsHref}>{gmapsCaption}</a><br /></small>
             </address>
         </div>
     );
-}
+});
 
 export var WhereToFind = React.createClass({
     mixins: [Router.State],
@@ -51,7 +53,7 @@ export var WhereToFind = React.createClass({
                     </div>
                     <div className="col-lg-4">
                         {Restaurants.map(function(restaurant, index) {
-                            return getRestaurantHtml(restaurant);
+                            return restaurant.content;
                         })}
                     </div>
                 </div>
