@@ -25,7 +25,7 @@ _.each(Marks, function(mark) {
     var gmapsCaption = mark.position.lat + ", " + mark.position.lng;
     var gmapsHref = "https://www.google.pt/maps/@" + mark.position.lat + "," + mark.position.lng + ",20z";
     mark.content = (
-        <div>
+        <div key={mark.key}>
             <address id={mark.key}>
                 <strong>{mark.name}</strong><br />
                 <small>{mark.addressLine1}<br />
