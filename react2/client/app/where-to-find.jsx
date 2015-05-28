@@ -57,8 +57,8 @@ export var WhereToFind = React.createClass({
                     </div>
                     <div className="col-lg-4">
                         {Restaurants.map(function(restaurant, index) {
-                            var gmapsCaption = restaurant.position.lat + "," + restaurant.position.lng;
-                            var gmapsHref = "https://www.google.pt/maps/@" + gmapsCaption + ",20z";
+                            var gmapsCaption = restaurant.position.lat + ", " + restaurant.position.lng;
+                            var gmapsHref = "https://www.google.pt/maps/@" + restaurant.position.lat + "," + restaurant.position.lng + ",20z";
                             return (
                                 <div>
                                     <address>
