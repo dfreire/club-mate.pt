@@ -5,7 +5,7 @@ class Map extends React.Component {
 
     constructor(args) {
         super(args);
-        this.state = { zoom: 6, markWithInfo: undefined };
+        this.state = { zoom: 6, center: {lat: 39.6833333, lng: -8.1166667}, markWithInfo: undefined };
     }
 
     _handleMarkerClick(mark) {
@@ -28,7 +28,7 @@ class Map extends React.Component {
                 }}
                 googleMapsApi={google.maps}
                 zoom={this.state.zoom}
-                center={{lat: 39.6833333, lng: -8.1166667}}>
+                center={this.state.center}>
                 {this.props.marks.map(function(mark, index) {
                     if (mark === that.state.markWithInfo) {
                         return <Marker

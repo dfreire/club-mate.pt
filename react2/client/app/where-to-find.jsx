@@ -3,7 +3,7 @@ import Router from "react-router";
 
 import Map from "./map.jsx";
 
-var Restaurants = [{
+var Marks = [{
     key: "casadoro",
     name: "Restaurante Casa D'Oro",
     addressLine1: "Rua do Ouro, Nº797",
@@ -21,15 +21,15 @@ var Restaurants = [{
     }
 }];
 
-_.each(Restaurants, function(restaurant) {
-    var gmapsCaption = restaurant.position.lat + ", " + restaurant.position.lng;
-    var gmapsHref = "https://www.google.pt/maps/@" + restaurant.position.lat + "," + restaurant.position.lng + ",20z";
-    restaurant.content = (
+_.each(Marks, function(mark) {
+    var gmapsCaption = mark.position.lat + ", " + mark.position.lng;
+    var gmapsHref = "https://www.google.pt/maps/@" + mark.position.lat + "," + mark.position.lng + ",20z";
+    mark.content = (
         <div>
-            <address id={restaurant.key}>
-                <strong>{restaurant.name}</strong><br />
-                <small>{restaurant.addressLine1}<br />
-                {restaurant.addressLine2}<br />
+            <address id={mark.key}>
+                <strong>{mark.name}</strong><br />
+                <small>{mark.addressLine1}<br />
+                {mark.addressLine2}<br />
                 <a href={gmapsHref}>{gmapsCaption}</a><br /></small>
             </address>
         </div>
@@ -49,11 +49,11 @@ export var WhereToFind = React.createClass({
                 </div>
                 <div className="row">
                     <div className="col-lg-8">
-                        <Map marks={Restaurants}/>
+                        <Map marks={Marks}/>
                     </div>
                     <div className="col-lg-4">
-                        {Restaurants.map(function(restaurant, index) {
-                            return restaurant.content;
+                        {Marks.map(function(mark, index) {
+                            return mark.content;
                         })}
                     </div>
                 </div>
