@@ -7,9 +7,19 @@ export default React.createClass({
     },
 
     _onZoomChanged: function() {
+        var zoom = this.refs.map.getZoom();
+        if (zoom !== this.state.zoom) {
+            this.setState({zoom: zoom, markWithInfo: undefined });
+            console.log("_onZoomChanged", zoom);
+        }
     },
 
     _onCenterChanged: function() {
+        var center = this.refs.map.getCenter();
+        if (center !== this.state.center) {
+            this.setState({center: center, markWithInfo: undefined });
+            console.log("_onCenterChanged", center);
+        }
     },
 
     _onMarkerClicked: function(mark) {
@@ -23,6 +33,7 @@ export default React.createClass({
                         height: "500px",
                     },
                 }}
+                ref="map"
                 googleMapsApi={google.maps}
                 zoom={this.state.zoom}
                 onZoomChanged={this._onZoomChanged}
