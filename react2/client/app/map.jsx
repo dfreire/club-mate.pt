@@ -17,14 +17,8 @@ export default React.createClass({
     },
 
     render: function() {
-        var hasMarkWithInfo = _.isObject(this.state.markWithInfo);
-
-        const {props, state} = this,
-        {googleMapsApi, otherProps} = props;
-
         return (
             <GoogleMaps containerProps={{
-                    otherProps,
                     style: {
                         height: "500px",
                     },
