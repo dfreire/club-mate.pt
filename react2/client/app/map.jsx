@@ -1,24 +1,22 @@
 import React from "react/addons";
 import {GoogleMaps, Marker, InfoWindow} from "react-google-maps";
 
-class Map extends React.Component {
+export default React.createClass({
+    getInitialState: function() {
+        return { zoom: 6, center: {lat: 39.6833333, lng: -8.1166667}, markWithInfo: undefined };
+    },
 
-    constructor(args) {
-        super(args);
-        this.state = { zoom: 6, center: {lat: 39.6833333, lng: -8.1166667}, markWithInfo: undefined };
-    }
+    _onZoomChanged: function() {
+    },
 
-    _onZoomChanged() {
-    }
+    _onCenterChanged: function() {
+    },
 
-    _onCenterChanged() {
-    }
-
-    _onMarkerClicked(mark) {
+    _onMarkerClicked: function(mark) {
         this.setState({ markWithInfo: mark });
-    }
+    },
 
-    render() {
+    render: function() {
         var hasMarkWithInfo = _.isObject(this.state.markWithInfo);
 
         const {props, state} = this,
@@ -55,7 +53,4 @@ class Map extends React.Component {
 
         );
     }
-
-}
-
-export default Map;
+});
