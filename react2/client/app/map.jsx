@@ -9,7 +9,7 @@ export default React.createClass({
     _onZoomChanged: function() {
         var zoom = this.refs.map.getZoom();
         if (zoom !== this.state.zoom) {
-            this.setState({zoom: zoom, markWithInfo: undefined });
+            this.setState({zoom: zoom});
             console.log("_onZoomChanged", zoom);
         }
     },
@@ -17,7 +17,7 @@ export default React.createClass({
     _onCenterChanged: function() {
         var center = this.refs.map.getCenter();
         if (center !== this.state.center) {
-            this.setState({center: center, markWithInfo: undefined });
+            this.setState({center: center});
             console.log("_onCenterChanged", center);
         }
     },
@@ -42,7 +42,12 @@ export default React.createClass({
                     {this.props.marks.map(function(mark, index) {
                         var infoWindow;
                         if (mark === this.state.markWithInfo) {
-                            infoWindow = (<InfoWindow position={mark.position} content={$("#"+mark.key).html()} />);
+                            infoWindow = (
+                                <InfoWindow
+                                    position={mark.position}
+                                    onCloseclick={function() { this._onMarkerClicked(); }.bind(this)}
+                                    content={$("#"+mark.key).html()} />
+                            );
                         }
                         return (
                             <Marker
