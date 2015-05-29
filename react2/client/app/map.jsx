@@ -10,7 +10,6 @@ export default React.createClass({
         var zoom = this.refs.map.getZoom();
         if (zoom !== this.state.zoom) {
             this.setState({zoom: zoom});
-            console.log("_onZoomChanged", zoom);
         }
     },
 
@@ -18,11 +17,10 @@ export default React.createClass({
         var center = this.refs.map.getCenter();
         if (center !== this.state.center) {
             this.setState({center: center});
-            console.log("_onCenterChanged", center);
         }
     },
 
-    _onMarkerClicked: function(mark) {
+    _setMarkWithInfo: function(mark) {
         this.setState({ markWithInfo: mark });
     },
 
@@ -45,7 +43,7 @@ export default React.createClass({
                             infoWindow = (
                                 <InfoWindow
                                     position={mark.position}
-                                    onCloseclick={function() { this._onMarkerClicked(); }.bind(this)}
+                                    onCloseclick={function() { this._setMarkWithInfo(); }.bind(this)}
                                     content={$("#"+mark.key).html()} />
                             );
                         }
@@ -53,7 +51,7 @@ export default React.createClass({
                             <Marker
                                 key={mark.key}
                                 position={mark.position}
-                                onClick={function() { this._onMarkerClicked(mark); }.bind(this)}
+                                onClick={function() { this._setMarkWithInfo(mark); }.bind(this)}
                                 icon="/img/club-mate-marker.png">
                                     {infoWindow}
                             </Marker>
