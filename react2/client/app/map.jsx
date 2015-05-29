@@ -36,23 +36,21 @@ class Map extends React.Component {
                 onZoomChanged={this._onZoomChanged}
                 center={this.state.center}
                 onCenterChanged={this._onCenterChanged}>
-                {this.props.marks.map(function(mark, index) {
-                    if (mark === this.state.markWithInfo) {
-                        return <Marker
-                            key={mark.key}
-                            position={mark.position}
-                            onClick={function() { this._onMarkerClicked(mark); }.bind(this)}
-                            icon="/img/club-mate-marker.png">;
-                            <InfoWindow position={mark.position} content={$("#"+mark.key).html()} />
-                        </Marker>
-                    } else {
-                        return <Marker
-                            key={mark.key}
-                            position={mark.position}
-                            onClick={function() { this._onMarkerClicked(mark); }.bind(this)}
-                            icon="/img/club-mate-marker.png" />;
-                    }
-                }.bind(this))}
+                    {this.props.marks.map(function(mark, index) {
+                        var infoWindow;
+                        if (mark === this.state.markWithInfo) {
+                            infoWindow = (<InfoWindow position={mark.position} content={$("#"+mark.key).html()} />);
+                        }
+                        return (
+                            <Marker
+                                key={mark.key}
+                                position={mark.position}
+                                onClick={function() { this._onMarkerClicked(mark); }.bind(this)}
+                                icon="/img/club-mate-marker.png">
+                                    {infoWindow}
+                            </Marker>
+                        );
+                    }.bind(this))}
             </GoogleMaps>
 
         );
