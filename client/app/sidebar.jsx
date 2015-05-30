@@ -23,10 +23,8 @@ export var SideBar = React.createClass({
                 </div>
                 <div>
                     <ul className="my-social-contacts-wrapper">
-                        <li><a href="#"><i className="fa fa-facebook-square"></i></a></li>
-                        <li><a href="#"><i className="fa fa-twitter-square"></i></a></li>
-                        <li><a href="#"><i className="fa fa-linkedin-square"></i></a></li>
-                        <li><a href="#"><i className="fa fa-pinterest-square"></i></a></li>
+                        <li><a href="https://www.facebook.com/pages/Club-Mate-Portugal/1555501154702745"><i className="fa fa-facebook-square"></i></a></li>
+                        <li><a href="https://instagram.com/clubmateportugal/"><i className="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
