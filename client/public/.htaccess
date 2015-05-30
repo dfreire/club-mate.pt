@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+RewriteEngine On
+ 
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^sobre-o-club-mate(/){0,1}$ ./index.html
+RewriteRule ^yerba-mate(/){0,1}$        ./index.html
+RewriteRule ^cocktails(/){0,1}$         ./index.html
+RewriteRule ^onde-encontrar(/){0,1}$    ./index.html
+RewriteRule ^contactos(/){0,1}$         ./index.html

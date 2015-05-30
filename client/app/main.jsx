@@ -68,6 +68,11 @@ var Container = React.createClass({
 var routes = (
     <Route handler={Container} path="/">
         <Redirect from="/" to="/sobre-o-club-mate" />
+        <Redirect from="/sobre-o-club-mate/" to="/sobre-o-club-mate" />
+        <Redirect from="/yerba-mate/"        to="/yerba-mate" />
+        <Redirect from="/cocktails/"         to="/cocktails" />
+        <Redirect from="/onde-encontrar/"    to="/onde-encontrar" />
+        <Redirect from="/contactos/"         to="/contactos" />
         <Route name="about"          path="/sobre-o-club-mate"  handler={About} />
         <Route name="yerba-mate"     path="/yerba-mate"         handler={YerbaMate} />
         <Route name="cocktails"      path="/cocktails"          handler={Cocktails} />
@@ -76,6 +81,6 @@ var routes = (
     </Route>
 );
 
-Router.run(routes/*, Router.HistoryLocation*/, function (Handler) {
+Router.run(routes, Router.HistoryLocation, function (Handler) {
     React.render(<Handler />, document.getElementById('app'));
 });

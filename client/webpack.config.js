@@ -1,7 +1,7 @@
 var path = require('path');
 
 var config = {
-	entry: ['webpack/hot/dev-server', './app/main.jsx'],
+	entry: ['./app/main.jsx'],
 	output: {
 		path: path.resolve(__dirname, './public'),
 		filename: 'bundle.js'
