@@ -110,7 +110,7 @@ export var WhereToFind = React.createClass({
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-12">
+                    <div className="col-lg-11">
                         <Map marks={Marks}/>
                     </div>
                 </div>
