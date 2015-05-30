@@ -4,21 +4,57 @@ import Router from "react-router";
 import Map from "./map.jsx";
 
 var Marks = [{
-    key: "casadoro",
-    name: "Restaurante Casa D'Oro",
-    addressLine1: "Rua do Ouro, Nº797",
+    key: "casa-d-oro",
+    name: "Casa D'Oro",
+    addressLine1: "Rua do Ouro, 797",
     addressLine2: "4150 Porto",
     position: {
         lat: 41.148056, lng: -8.642722
     }
 }, {
-    key: "pizzaapezzi",
-    name: "Restaurante Pizza à Pezzi",
-    addressLine1: "Rua Dom Pedro V, Nº84 (Príncipe Real)",
-    addressLine2: "1250-001 Lisboa",
+    key: "pizza-a-pezzi",
+    name: "Pizza a Pezzi",
+    addressLine1: "Praça de Guilherme Gomes Fernandes, 57",
+    addressLine2: "4050-293 Porto",
     position: {
-        lat: 38.7159764, lng: -9.1467839
+        lat: 41.1477907, lng: -8.6149328
     }
+
+}, {
+    key: "maus-habitos",
+    name: "Maus Hábitos",
+    addressLine1: "R. de Passos Manuel, 178, 4º Piso",
+    addressLine2: "4000-382 Porto",
+    position: {
+        lat: 41.146703, lng: -8.605738
+    }
+
+}, {
+    key: "black-mamba",
+    name: "Black Mamba",
+    addressLine1: "Rua Mártires da Liberdade, 130",
+    addressLine2: "4000 Porto",
+    position: {
+        lat: 41.151276, lng: -8.613917
+    }
+}, {
+    key: "plano-b",
+    name: "Plano B",
+    addressLine1: "Rua Cândido dos Reis, 30",
+    addressLine2: "4050-150 Porto",
+    position: {
+        lat: 41.146518, lng: -8.613898
+    }
+/*
+}, {
+    key: "",
+    name: "",
+    addressLine1: "",
+    addressLine2: "",
+    position: {
+        lat: , lng:
+    }
+*/
 }];
 
 _.each(Marks, function(mark) {

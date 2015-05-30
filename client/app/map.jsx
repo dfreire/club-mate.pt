@@ -3,7 +3,7 @@ import {GoogleMaps, Marker, InfoWindow} from "react-google-maps";
 
 export default React.createClass({
     getInitialState: function() {
-        return { zoom: 6, center: {lat: 39.6833333, lng: -8.1166667}, markWithInfo: undefined };
+        return { zoom: 13, center: {lat: 41.146518, lng: -8.613898}, markWithInfo: undefined };
     },
 
     _onZoomChanged: function() {
