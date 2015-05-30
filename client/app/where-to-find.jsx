@@ -3,7 +3,7 @@ import Router from "react-router";
 
 import Map from "./map.jsx";
 
-var Marks = [{
+var Marks = _.sortBy([{
     key: "casa-d-oro",
     name: "Casa D'Oro",
     addressLine1: "Rua do Ouro, 797",
@@ -45,6 +45,30 @@ var Marks = [{
     position: {
         lat: 41.146518, lng: -8.613898
     }
+}, {
+    key: "pop-101",
+    name: "Pop 101",
+    addressLine1: "Rua de Trás, 101",
+    addressLine2: "Porto",
+    position: {
+        lat: 41.145516, lng: -8.613792
+    }
+}, {
+    key: "era-uma-vez-no-porto",
+    name: "Era uma vez no Porto",
+    addressLine1: "Rua das Carmelitas, 162",
+    addressLine2: "4050-161 Porto",
+    position: {
+        lat: 41.146942, lng: -8.615011
+    }
+}, {
+    key: "era-uma-vez-em-paris",
+    name: "Era uma vez em Paris",
+    addressLine1: "Rua Galeria de Paris, 106-108",
+    addressLine2: "4050-284 Porto",
+    position: {
+        lat: 41.1471739, lng: -8.6143639
+    }
 /*
 }, {
     key: "",
@@ -55,7 +79,9 @@ var Marks = [{
         lat: , lng:
     }
 */
-}];
+}], function(mark) {
+    return mark.key;
+});
 
 _.each(Marks, function(mark) {
     var gmapsCaption = mark.position.lat + ", " + mark.position.lng;
