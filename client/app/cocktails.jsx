@@ -1,7 +1,7 @@
 import React from "react/addons";
 import Router from "react-router";
 
-var data = [{
+var cocktailList = [{
     name: "Mojito-Mate",
     ingredients: [
         "Lima",
@@ -12,6 +12,28 @@ var data = [{
         "Club-Mate"
     ],
     description: "Esmagar as limas com o açúcar e adicionar gelo. De seguida acrescentar 4 a 6 cl de rum, club-mate a gosto, e finalizar com folhas de hortelã frescas. Misturar e beber!"
+}, {
+    name: "Long Island Mate",
+    ingredients: [
+        "20 cl Gin",
+        "20 cl Tequilla",
+        "20 cl Vodka",
+        "20 cl Rum",
+        "20 cl Triple Sec",
+        "Limas",
+        "Açúcar amarelo",
+        "Gelo em cubo ou picado",
+        "Club-Mate"
+    ],
+    description: "Esmagar as limas com o açúcar e adicionar gelo. Acrescentar as 5 bebidas e club-mate. Misturar gentilmente e beber!"
+}, {
+    name: "Mate-Meister",
+    ingredients: [
+        "Jagermeister",
+        "Gelo em cubo",
+        "Club-Mate"
+    ],
+    description: ""
 }, {
     name: "Vodka-Mate",
     ingredients: [
@@ -30,32 +52,11 @@ var data = [{
     ],
     description: ""
 }, {
-    name: "Mate-Meister",
-    ingredients: [
-        "Jagermeister",
-        "Gelo em cubo",
-        "Club-Mate"
-    ],
-    description: ""
-}, {
     name: "Martini-Mate",
     ingredients: [
         "Martini Rosso",
         "Limão",
         "Gelo em cubo",
-        "Club-Mate"
-    ],
-}, {
-    name: "Long Island Mate",
-    ingredients: [
-        "20 cl Gin",
-        "20 cl Tequilla",
-        "20 cl Vodka",
-        "20 cl Rum",
-        "20 cl Triple Sec",
-        "Limas",
-        "Açúcar amarelo",
-        "Gelo em cubo ou picado",
         "Club-Mate"
     ],
     description: ""
@@ -72,6 +73,49 @@ var data = [{
 */
 }];
 
+var rows = [
+    [ cocktailList[0],  cocktailList[1],  cocktailList[2] ],
+    [ cocktailList[3],  cocktailList[4],  cocktailList[5] ],
+];
+
+
+function renderCocktail(cocktail) {
+    var ingredientTags = cocktail.ingredients.map(function(ingredient) {
+        return (<li><small>{ingredient}</small></li>);
+    });
+    return (
+        <div>
+            <div className="col-lg-4">
+                <div style={{background: "#f5f5f5", padding: "20px", marginBottom: "30px", height: "320px" }} >
+                    <h3 style={{marginTop: "0px"}}>{cocktail.name}</h3>
+                    <ul>
+                        {ingredientTags}
+                    </ul>
+                    <small style={{textAlign: "justify"}}>{cocktail.description}</small>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+function renderRow(row) {
+    var cocktailTags = row.map(function(cocktail) {
+        return renderCocktail(cocktail);
+    });
+    return (
+        <div className="row">
+            {cocktailTags}
+        </div>
+    );
+};
+
+function renderRows() {
+    var rowsTag = rows.map(function(row) {
+        return renderRow(row);
+    });
+    return ({rowsTag});
+};
+
 export var Cocktails = React.createClass({
     mixins: [Router.State],
 
@@ -83,24 +127,7 @@ export var Cocktails = React.createClass({
                         <h1>Cocktails</h1>
                     </div>
                 </div>
-                <div className="row">
-                    {data.map(function(cocktail, index) {
-                        var ingredientList = cocktail.ingredients.map(function(ingredient) {
-                            return (<li>{ingredient}</li>);
-                        });
-                        return (
-                            <div className="col-lg-4">
-                                <div style={{background: "#eee", padding: "20px"}}>
-                                    <h3 style={{marginTop: "0px"}}>{cocktail.name}</h3>
-                                    <ul>
-                                        {ingredientList}
-                                    </ul>
-                                    <p style={{textAlign: "justify"}}>{cocktail.description}</p>
-                                </div>
-                            </div>
-                        );
-                    }.bind(this))}
-                </div>
+                {renderRows()}
             </div>
         );
     }
