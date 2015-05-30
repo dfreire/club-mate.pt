@@ -29,6 +29,36 @@ var data = [{
         "Club-Mate"
     ],
     description: ""
+}, {
+    name: "Mate-Meister",
+    ingredients: [
+        "Jagermeister",
+        "Gelo em cubo",
+        "Club-Mate"
+    ],
+    description: ""
+}, {
+    name: "Martini-Mate",
+    ingredients: [
+        "Martini Rosso",
+        "Limão",
+        "Gelo em cubo",
+        "Club-Mate"
+    ],
+}, {
+    name: "Long Island Mate",
+    ingredients: [
+        "20 cl Gin",
+        "20 cl Tequilla",
+        "20 cl Vodka",
+        "20 cl Rum",
+        "20 cl Triple Sec",
+        "Limas",
+        "Açúcar amarelo",
+        "Gelo em cubo ou picado",
+        "Club-Mate"
+    ],
+    description: ""
 /*
 }, {
     name: "",
