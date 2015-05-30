@@ -14,7 +14,7 @@ var Marks = _.sortBy([{
 }, {
     key: "pizza-a-pezzi",
     name: "Pizza a Pezzi",
-    addressLine1: "Praça de Guilherme Gomes Fernandes, 57",
+    addressLine1: "Praça Guilherme Gomes Fernandes, 57",
     addressLine2: "4050-293 Porto",
     position: {
         lat: 41.1477907, lng: -8.6149328
@@ -110,14 +110,18 @@ export var WhereToFind = React.createClass({
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-8">
+                    <div className="col-lg-12">
                         <Map marks={Marks}/>
                     </div>
-                    <div className="col-lg-4">
-                        {Marks.map(function(mark, index) {
-                            return mark.content;
-                        })}
-                    </div>
+                </div>
+                <div style={{ marginTop: "35px" }} className="row">
+                    {Marks.map(function(mark, index) {
+                        return (
+                            <div className="col-lg-3">
+                                {mark.content}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         );
