@@ -1,6 +1,6 @@
 [ ] sobre-o-club-mate
     logo grande do lado direito com rotação para a direita 20º
-[ ] títulos azul
+[x] títulos azul
 [ ] em vez da cruz, seta para o lado esquerdo
 [ ] tipo de letra mais alta e mais fina
 [ ] "Contactos / Encomendas"
