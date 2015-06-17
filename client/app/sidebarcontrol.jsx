@@ -19,7 +19,7 @@ export var SideBarControl = React.createClass({
 
     getClassNames: function () {
         if (this.state.visible) {
-            return ClassNames('fa', 'fa-times');
+            return ClassNames('fa', 'fa-long-arrow-left');
         } else {
             return ClassNames('fa', 'fa-bars');
         }
