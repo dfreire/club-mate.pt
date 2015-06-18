@@ -15,7 +15,7 @@ export var SideBar = React.createClass({
                         <li><Link to="/yerba-mate">Yerba Mate</Link></li>
                         <li><Link to="/cocktails">Cocktails</Link></li>
                         <li><Link to="/onde-encontrar">Onde Encontrar</Link></li>
-                        <li><Link to="/contactos">Contactos e Encomendas</Link></li>
+                        <li><Link to="/contactos">Contactos / Encomendas</Link></li>
                     </ul>
                 </div>
                 <div className="my-contact-wrapper">
