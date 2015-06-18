@@ -3,7 +3,7 @@
 [x] títulos azul
 [x] em vez da cruz, seta para o lado esquerdo
 [ ] tipo de letra mais alta e mais fina
-[ ] "Contactos / Encomendas"
+[x] "Contactos / Encomendas"
     meter texto e preços
 [ ] onde encontrar
     mercearias, restaurates, bares
