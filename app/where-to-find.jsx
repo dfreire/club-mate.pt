@@ -117,7 +117,7 @@ export var WhereToFind = React.createClass({
                 <div style={{ marginTop: "35px" }} className="row">
                     {Marks.map(function(mark, index) {
                         return (
-                            <div className="col-lg-3">
+                            <div className="col-lg-4">
                                 {mark.content}
                             </div>
                         );
