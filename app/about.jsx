@@ -18,6 +18,9 @@ export var About = React.createClass({
                         <p>Club-Mate tem por base apenas ingredientes naturais e pode ser consumido por vegans e vegetarianos. É também um produto ecológico, dado que só está disponível em garrafas de vidro.</p>
                         <p>Depois de se ter tornado um símbolo da cena cultural berlinense, com o seu sabor distinto e efeito revigorante, Club-Mate tem vindo a conquistar pessoas em todo o mundo.</p>
                     </div>
+                    <div style={{ textAlign: "center" }} className="col-lg-5">
+                        <img src="/img/club-mate-translucid-rotated.png" />
+                    </div>
                 </div>
             </div>
         );
