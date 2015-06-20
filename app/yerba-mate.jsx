@@ -19,6 +19,9 @@ export var YerbaMate = React.createClass({
                         <p>O Instituto Pasteur e a Sociedade Científica Parisiense concluíram em 1964 que “é difícil encontrar, em qualquer área do mundo, outra planta comparável a yerba mate no que aos valores nutricionais diz respeito”; yerba mate contém “praticamente todas as vitaminas necessárias ao ser vivo”.</p>
                         <p>Entre outras das substâncias que compõem esta planta encontram-se a cafeína, a teofilina e teobromina, componentes que também se encontram, separadamente, no chá, no café e no chocolate.</p>
                     </div>
+                    <div style={{ textAlign: "center" }} className="col-lg-5">
+                        <img src="/img/club-mate-translucid-rotated.png" />
+                    </div>
                 </div>
             </div>
         );
