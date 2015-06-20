@@ -79,28 +79,26 @@ var rows = [
 ];
 
 
-function renderCocktail(cocktail) {
-    var ingredientTags = cocktail.ingredients.map(function(ingredient) {
-        return (<li><small>{ingredient}</small></li>);
+function renderCocktail(cocktail, i) {
+    var ingredientTags = cocktail.ingredients.map(function(ingredient, j) {
+        return (<li key={"ing-"+j}><small>{ingredient}</small></li>);
     });
     return (
-        <div>
-            <div className="col-lg-4">
-                <div style={{background: "#f5f5f5", padding: "20px", marginBottom: "30px", height: "320px" }} >
-                    <h3 style={{marginTop: "0px"}}>{cocktail.name}</h3>
-                    <ul>
-                        {ingredientTags}
-                    </ul>
-                    <small style={{textAlign: "justify"}}>{cocktail.description}</small>
-                </div>
+        <div key={"cocktail-"+i} className="col-lg-4">
+            <div style={{background: "#f5f5f5", padding: "20px", marginBottom: "30px", height: "320px" }} >
+                <h3 style={{marginTop: "0px"}}>{cocktail.name}</h3>
+                <ul>
+                    {ingredientTags}
+                </ul>
+                <small style={{textAlign: "justify"}}>{cocktail.description}</small>
             </div>
         </div>
     );
 };
 
 function renderRow(row) {
-    var cocktailTags = row.map(function(cocktail) {
-        return renderCocktail(cocktail);
+    var cocktailTags = row.map(function(cocktail, i) {
+        return renderCocktail(cocktail, i);
     });
     return (
         <div className="row">
