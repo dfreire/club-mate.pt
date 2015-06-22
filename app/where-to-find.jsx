@@ -3,7 +3,11 @@ import Router from "react-router";
 
 import Map from "./map.jsx";
 
-var Retaurants = [{
+function getKey(record) {
+    return record.key;
+}
+
+var Retaurants = _.sortBy([{
     key: "casa-d-oro",
     name: "Casa D'Oro",
     addressLine1: "Rua do Ouro, 797",
@@ -27,21 +31,25 @@ var Retaurants = [{
     position: {
         lat: 41.151276, lng: -8.613917
     }
+}, {
+    key: "sins",
+    name: "Sins",
+    addressLine1: "Rua da Conceição, 59",
+    addressLine2: "Porto",
+    position: {
+        lat: 41.149968, lng: -8.6144417
+    }
+}, {
+    key: "ccop",
+    name: "Café CCOP",
+    addressLine1: "Rua Duque Loulé, 202",
+    addressLine2: "Porto",
+    position: {
+        lat: 41.1446968, lng: -8.6046485
+    }
+}], getKey);
 
-/*
-Sins
-
-Rua da Conceição nº 59 Porto
-
-
-Café CCOP
-Rua Duque Loulé nº 202
-Porto
-
-*/    
-}];
-
-var Bars = [{
+var Bars = _.sortBy([{
     key: "maus-habitos",
     name: "Maus Hábitos",
     addressLine1: "R. de Passos Manuel, 178, 4º Piso",
@@ -81,44 +89,51 @@ var Bars = [{
     position: {
         lat: 41.1471739, lng: -8.6143639
     }
+}, {
+    key: "candelabro",
+    name: "Candelabro",
+    addressLine1: "Rua da Conceição, 3",
+    addressLine2: "Porto",
+    position: {
+        lat: 41.1499998, lng: -8.6131836
+    }
+}], getKey);
 
-    /*
-    candelabro
-
-rua da conceição nº3 Porto
-*/
-
-
-}];
-
-var Groceries = [{
-    /*
-    Petúlia
-
-Rua de Júlio Dinis 775      4150-323 Porto
-
-
-Dona Rosa
-
-Mercado bolhão Loja 1      4000-252 Porto
-
-
-Mercearia Rodela
-
-Praça Guilherme Gomes Fernandes, 66      4050-294 Porto
-
-
-Mercearia Rodela 2
-
-Rua Saraiva Carvalho nº47      4000-520 Porto
-*/
-
-}];
-
-var Marks = _.sortBy([{
+var Groceries = _.sortBy([{
+    key: "petulia",
+    name: "Petúlia",
+    addressLine1: "Rua de Júlio Dinis, 775",
+    addressLine2: "4150-323 Porto",
+    position: {
+        lat: 41.1554788, lng: -8.6275579
+    }
+}, {
+    key: "",
+    name: "Dona Rosa",
+    addressLine1: "Mercado do Bolhão Loja 1",
+    addressLine2: "4000-252 Porto",
+    position: {
+        lat: 41.14872, lng: -8.607466
+    }
+}, {
+    key: "",
+    name: "Mercearia Rodela",
+    addressLine1: "Praça Guilherme Gomes Fernandes, 66",
+    addressLine2: "4050-294 Porto",
+    position: {
+        lat: 41.1477441, lng: -8.6144663
+    }
+}, {
+    key: "",
+    name: "Mercearia Rodela 2",
+    addressLine1: "Rua Saraiva Carvalho, 47",
+    addressLine2: "4000-520 Porto",
+    position: {
+        lat: 41.1432659, lng: -8.6095884
+    }
+}], getKey);
 
 /*
-}, {
     key: "",
     name: "",
     addressLine1: "",
@@ -127,9 +142,6 @@ var Marks = _.sortBy([{
         lat: , lng:
     }
 */
-}], function(mark) {
-    return mark.key;
-});
 
 _.each(Marks, function(mark) {
     var gmapsCaption = mark.position.lat + ", " + mark.position.lng;
