@@ -8,6 +8,11 @@ function getKey(record) {
 }
 
 var Retaurants = _.sortBy([{
+    /*
+     Espaço Compasso
+
+    4050 609, Rua da Torrinha 113, Porto
+     */
     key: "casa-d-oro",
     name: "Casa D'Oro",
     addressLine1: "Rua do Ouro, 797",
