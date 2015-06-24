@@ -7,12 +7,25 @@ function getKey(record) {
     return record.key;
 }
 
-var Restaurants = _.sortBy([{
-    /*
-     Espaço Compasso
+/*
+    key: "",
+    name: "",
+    addressLine1: "",
+    addressLine2: "",
+    position: {
+        lat: , lng:
+    }
+*/
 
-    4050 609, Rua da Torrinha 113, Porto
-     */
+var Restaurants = _.sortBy([{
+    key: "espacocompasso",
+    name: "Espaço Compasso",
+    addressLine1: "Rua da Torrinha, 113",
+    addressLine2: "4050-609 Porto",
+    position: {
+        lat: 41.1524767, lng: -8.6199931
+    }
+}, {
     key: "casa-d-oro",
     name: "Casa D'Oro",
     addressLine1: "Rua do Ouro, 797",
@@ -137,16 +150,6 @@ var Groceries = _.sortBy([{
         lat: 41.1432659, lng: -8.6095884
     }
 }], getKey);
-
-/*
-    key: "",
-    name: "",
-    addressLine1: "",
-    addressLine2: "",
-    position: {
-        lat: , lng:
-    }
-*/
 
 var Marks = _.union(Restaurants, Bars, Groceries);
 
