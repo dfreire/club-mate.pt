@@ -7,7 +7,7 @@ function getKey(record) {
     return record.key;
 }
 
-var Retaurants = _.sortBy([{
+var Restaurants = _.sortBy([{
     /*
      Espaço Compasso
 
@@ -113,7 +113,7 @@ var Groceries = _.sortBy([{
         lat: 41.1554788, lng: -8.6275579
     }
 }, {
-    key: "",
+    key: "donarosa",
     name: "Dona Rosa",
     addressLine1: "Mercado do Bolhão Loja 1",
     addressLine2: "4000-252 Porto",
@@ -121,7 +121,7 @@ var Groceries = _.sortBy([{
         lat: 41.14872, lng: -8.607466
     }
 }, {
-    key: "",
+    key: "rodela",
     name: "Mercearia Rodela",
     addressLine1: "Praça Guilherme Gomes Fernandes, 66",
     addressLine2: "4050-294 Porto",
@@ -129,7 +129,7 @@ var Groceries = _.sortBy([{
         lat: 41.1477441, lng: -8.6144663
     }
 }, {
-    key: "",
+    key: "rodela2",
     name: "Mercearia Rodela 2",
     addressLine1: "Rua Saraiva Carvalho, 47",
     addressLine2: "4000-520 Porto",
@@ -147,6 +147,8 @@ var Groceries = _.sortBy([{
         lat: , lng:
     }
 */
+
+var Marks = _.union(Restaurants, Bars, Groceries);
 
 _.each(Marks, function(mark) {
     var gmapsCaption = mark.position.lat + ", " + mark.position.lng;
