@@ -184,19 +184,49 @@ export var WhereToFind = React.createClass({
                         <Map marks={Marks}/>
                     </div>
                 </div>
-                <div style={{ marginTop: "25px", marginBottom: "15px" }} className="row">
-                    <div className="col-lg-4"> <h3>Bares</h3> </div>
-                    <div className="col-lg-4"> <h3>Restaurantes</h3> </div>
-                    <div className="col-lg-4"> <h3>Merecearias</h3> </div>
-                </div>
                 <div className="row">
-                    {Marks.map(function(mark, i) {
-                        return (
-                            <div key={"mark-"+i} className="col-lg-4">
-                                {mark.content}
+                    <div className="col-lg-4">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <h3>Bares</h3>
                             </div>
-                        );
-                    })}
+                            {Bars.map(function(mark, i) {
+                                return (
+                                    <div key={"mark-"+i} className="col-lg-12">
+                                        {mark.content}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                    <div className="col-lg-4">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <h3>Restaurantes</h3>
+                            </div>
+                            {Restaurants.map(function(mark, i) {
+                                return (
+                                    <div key={"mark-"+i} className="col-lg-12">
+                                        {mark.content}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                    <div className="col-lg-4">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <h3>Mercearias</h3>
+                            </div>
+                            {Groceries.map(function(mark, i) {
+                                return (
+                                    <div key={"mark-"+i} className="col-lg-12">
+                                        {mark.content}
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
                 </div>
             </div>
         );
