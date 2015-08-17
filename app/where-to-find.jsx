@@ -22,6 +22,7 @@ var Restaurants = _.sortBy([{
     name: "Espaço Compasso",
     addressLine1: "Rua da Torrinha, 113",
     addressLine2: "4050-609 Porto",
+    city: "Porto",
     position: {
         lat: 41.1524767, lng: -8.6199931
     }
@@ -30,6 +31,7 @@ var Restaurants = _.sortBy([{
     name: "Casa D'Oro",
     addressLine1: "Rua do Ouro, 797",
     addressLine2: "4150 Porto",
+    city: "Porto",
     position: {
         lat: 41.148056, lng: -8.642722
     }
@@ -38,6 +40,7 @@ var Restaurants = _.sortBy([{
     name: "Pizza a Pezzi",
     addressLine1: "Praça Guilherme Gomes Fernandes, 57",
     addressLine2: "4050-293 Porto",
+    city: "Porto",
     position: {
         lat: 41.1477907, lng: -8.6149328
     }
@@ -46,6 +49,7 @@ var Restaurants = _.sortBy([{
     name: "Black Mamba",
     addressLine1: "Rua Mártires da Liberdade, 130",
     addressLine2: "4000 Porto",
+    city: "Porto",
     position: {
         lat: 41.151276, lng: -8.613917
     }
@@ -54,6 +58,7 @@ var Restaurants = _.sortBy([{
     name: "Sins",
     addressLine1: "Rua da Conceição, 59",
     addressLine2: "Porto",
+    city: "Porto",
     position: {
         lat: 41.149968, lng: -8.6144417
     }
@@ -62,6 +67,7 @@ var Restaurants = _.sortBy([{
     name: "Café CCOP",
     addressLine1: "Rua Duque Loulé, 202",
     addressLine2: "Porto",
+    city: "Porto",
     position: {
         lat: 41.1446968, lng: -8.6046485
     }
@@ -72,6 +78,7 @@ var Bars = _.sortBy([{
     name: "Maus Hábitos",
     addressLine1: "R. de Passos Manuel, 178, 4º Piso",
     addressLine2: "4000-382 Porto",
+    city: "Porto",
     position: {
         lat: 41.146703, lng: -8.605738
     }
@@ -80,6 +87,7 @@ var Bars = _.sortBy([{
     name: "Plano B",
     addressLine1: "Rua Cândido dos Reis, 30",
     addressLine2: "4050-150 Porto",
+    city: "Porto",
     position: {
         lat: 41.146518, lng: -8.613898
     }
@@ -88,6 +96,7 @@ var Bars = _.sortBy([{
     name: "Pop 101",
     addressLine1: "Rua de Trás, 101",
     addressLine2: "Porto",
+    city: "Porto",
     position: {
         lat: 41.145516, lng: -8.613792
     }
@@ -96,6 +105,7 @@ var Bars = _.sortBy([{
     name: "Era uma vez no Porto",
     addressLine1: "Rua das Carmelitas, 162",
     addressLine2: "4050-161 Porto",
+    city: "Porto",
     position: {
         lat: 41.146942, lng: -8.615011
     }
@@ -104,6 +114,7 @@ var Bars = _.sortBy([{
     name: "Era uma vez em Paris",
     addressLine1: "Rua Galeria de Paris, 106-108",
     addressLine2: "4050-284 Porto",
+    city: "Porto",
     position: {
         lat: 41.1471739, lng: -8.6143639
     }
@@ -112,6 +123,7 @@ var Bars = _.sortBy([{
     name: "Candelabro",
     addressLine1: "Rua da Conceição, 3",
     addressLine2: "Porto",
+    city: "Porto",
     position: {
         lat: 41.1499998, lng: -8.6131836
     }
@@ -122,6 +134,7 @@ var Groceries = _.sortBy([{
     name: "Petúlia",
     addressLine1: "Rua de Júlio Dinis, 775",
     addressLine2: "4150-323 Porto",
+    city: "Porto",
     position: {
         lat: 41.1554788, lng: -8.6275579
     }
@@ -130,6 +143,7 @@ var Groceries = _.sortBy([{
     name: "Dona Rosa",
     addressLine1: "Mercado do Bolhão Loja 1",
     addressLine2: "4000-252 Porto",
+    city: "Porto",
     position: {
         lat: 41.14872, lng: -8.607466
     }
@@ -138,6 +152,7 @@ var Groceries = _.sortBy([{
     name: "Mercearia Rodela",
     addressLine1: "Praça Guilherme Gomes Fernandes, 66",
     addressLine2: "4050-294 Porto",
+    city: "Porto",
     position: {
         lat: 41.1477441, lng: -8.6144663
     }
@@ -146,6 +161,7 @@ var Groceries = _.sortBy([{
     name: "Mercearia Rodela 2",
     addressLine1: "Rua Saraiva Carvalho, 47",
     addressLine2: "4000-520 Porto",
+    city: "Porto",
     position: {
         lat: 41.1432659, lng: -8.6095884
     }
