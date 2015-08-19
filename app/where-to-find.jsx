@@ -207,10 +207,6 @@ function renderMarks(title, type, city) {
     );
 }
 
-function getKey(record) {
-    return record.key;
-}
-
 export var WhereToFind = React.createClass({
     mixins: [Router.State],
 
