@@ -3,21 +3,8 @@ import Router from "react-router";
 
 import Map from "./map.jsx";
 
-function getKey(record) {
-    return record.key;
-}
-
-/*
-    key: "",
-    name: "",
-    addressLine1: "",
-    addressLine2: "",
-    position: {
-        lat: , lng:
-    }
-*/
-
-var Restaurants = _.sortBy([{
+let Marks = [{
+    type: "restaurant",
     key: "espacocompasso",
     name: "Espaço Compasso",
     addressLine1: "Rua da Torrinha, 113",
@@ -27,6 +14,7 @@ var Restaurants = _.sortBy([{
         lat: 41.1524767, lng: -8.6199931
     }
 }, {
+    type: "restaurant",
     key: "casa-d-oro",
     name: "Casa D'Oro",
     addressLine1: "Rua do Ouro, 797",
@@ -36,6 +24,7 @@ var Restaurants = _.sortBy([{
         lat: 41.148056, lng: -8.642722
     }
 }, {
+    type: "restaurant",
     key: "pizza-a-pezzi",
     name: "Pizza a Pezzi",
     addressLine1: "Praça Guilherme Gomes Fernandes, 57",
@@ -45,6 +34,7 @@ var Restaurants = _.sortBy([{
         lat: 41.1477907, lng: -8.6149328
     }
 }, {
+    type: "restaurant",
     key: "black-mamba",
     name: "Black Mamba",
     addressLine1: "Rua Mártires da Liberdade, 130",
@@ -54,6 +44,7 @@ var Restaurants = _.sortBy([{
         lat: 41.151276, lng: -8.613917
     }
 }, {
+    type: "restaurant",
     key: "sins",
     name: "Sins",
     addressLine1: "Rua da Conceição, 59",
@@ -63,6 +54,7 @@ var Restaurants = _.sortBy([{
         lat: 41.149968, lng: -8.6144417
     }
 }, {
+    type: "restaurant",
     key: "ccop",
     name: "Café CCOP",
     addressLine1: "Rua Duque Loulé, 202",
@@ -71,9 +63,8 @@ var Restaurants = _.sortBy([{
     position: {
         lat: 41.1446968, lng: -8.6046485
     }
-}], getKey);
-
-var Bars = _.sortBy([{
+}, {
+    type: "bar",
     key: "maus-habitos",
     name: "Maus Hábitos",
     addressLine1: "R. de Passos Manuel, 178, 4º Piso",
@@ -83,6 +74,7 @@ var Bars = _.sortBy([{
         lat: 41.146703, lng: -8.605738
     }
 }, {
+    type: "bar",
     key: "plano-b",
     name: "Plano B",
     addressLine1: "Rua Cândido dos Reis, 30",
@@ -92,6 +84,7 @@ var Bars = _.sortBy([{
         lat: 41.146518, lng: -8.613898
     }
 }, {
+    type: "bar",
     key: "pop-101",
     name: "Pop 101",
     addressLine1: "Rua de Trás, 101",
@@ -101,6 +94,7 @@ var Bars = _.sortBy([{
         lat: 41.145516, lng: -8.613792
     }
 }, {
+    type: "bar",
     key: "era-uma-vez-no-porto",
     name: "Era uma vez no Porto",
     addressLine1: "Rua das Carmelitas, 162",
@@ -110,6 +104,7 @@ var Bars = _.sortBy([{
         lat: 41.146942, lng: -8.615011
     }
 }, {
+    type: "bar",
     key: "era-uma-vez-em-paris",
     name: "Era uma vez em Paris",
     addressLine1: "Rua Galeria de Paris, 106-108",
@@ -119,6 +114,7 @@ var Bars = _.sortBy([{
         lat: 41.1471739, lng: -8.6143639
     }
 }, {
+    type: "bar",
     key: "candelabro",
     name: "Candelabro",
     addressLine1: "Rua da Conceição, 3",
@@ -127,9 +123,8 @@ var Bars = _.sortBy([{
     position: {
         lat: 41.1499998, lng: -8.6131836
     }
-}], getKey);
-
-var Groceries = _.sortBy([{
+}, {
+    type: "grocery",
     key: "petulia",
     name: "Petúlia",
     addressLine1: "Rua de Júlio Dinis, 775",
@@ -139,6 +134,7 @@ var Groceries = _.sortBy([{
         lat: 41.1554788, lng: -8.6275579
     }
 }, {
+    type: "grocery",
     key: "donarosa",
     name: "Dona Rosa",
     addressLine1: "Mercado do Bolhão Loja 1",
@@ -148,6 +144,7 @@ var Groceries = _.sortBy([{
         lat: 41.14872, lng: -8.607466
     }
 }, {
+    type: "grocery",
     key: "rodela",
     name: "Mercearia Rodela",
     addressLine1: "Praça Guilherme Gomes Fernandes, 66",
@@ -157,6 +154,7 @@ var Groceries = _.sortBy([{
         lat: 41.1477441, lng: -8.6144663
     }
 }, {
+    type: "grocery",
     key: "rodela2",
     name: "Mercearia Rodela 2",
     addressLine1: "Rua Saraiva Carvalho, 47",
@@ -165,9 +163,7 @@ var Groceries = _.sortBy([{
     position: {
         lat: 41.1432659, lng: -8.6095884
     }
-}], getKey);
-
-var Marks = _.union(Restaurants, Bars, Groceries);
+}];
 
 _.each(Marks, function(mark) {
     var gmapsCaption = mark.position.lat + ", " + mark.position.lng;
@@ -183,6 +179,20 @@ _.each(Marks, function(mark) {
         </div>
     );
 });
+
+function getMarks(type, city) {
+    let _marks = [];
+    Marks.forEach((mark, i) => {
+        if (mark.type === type && mark.city === city) {
+            _marks.push(mark);
+        }
+    });
+    return _marks;
+}
+
+function getKey(record) {
+    return record.key;
+}
 
 export var WhereToFind = React.createClass({
     mixins: [Router.State],
@@ -211,7 +221,7 @@ export var WhereToFind = React.createClass({
                             <div className="col-lg-12">
                                 <h3>Bares</h3>
                             </div>
-                            {Bars.map(function(mark, i) {
+                            {getMarks('bar', 'Porto').map(function(mark, i) {
                                 return (
                                     <div key={"mark-"+i} className="col-lg-12">
                                         {mark.content}
@@ -225,7 +235,7 @@ export var WhereToFind = React.createClass({
                             <div className="col-lg-12">
                                 <h3>Restaurantes</h3>
                             </div>
-                            {Restaurants.map(function(mark, i) {
+                            {getMarks('restaurant', 'Porto').map(function(mark, i) {
                                 return (
                                     <div key={"mark-"+i} className="col-lg-12">
                                         {mark.content}
@@ -239,7 +249,7 @@ export var WhereToFind = React.createClass({
                             <div className="col-lg-12">
                                 <h3>Mercearias</h3>
                             </div>
-                            {Groceries.map(function(mark, i) {
+                            {getMarks('grocery', 'Porto').map(function(mark, i) {
                                 return (
                                     <div key={"mark-"+i} className="col-lg-12">
                                         {mark.content}
@@ -255,48 +265,6 @@ export var WhereToFind = React.createClass({
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <h3>Bares</h3>
-                            </div>
-                            {Bars.map(function(mark, i) {
-                                return (
-                                    <div key={"mark-"+i} className="col-lg-12">
-                                        {mark.content}
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <h3>Restaurantes</h3>
-                            </div>
-                            {Restaurants.map(function(mark, i) {
-                                return (
-                                    <div key={"mark-"+i} className="col-lg-12">
-                                        {mark.content}
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <h3>Mercearias</h3>
-                            </div>
-                            {Groceries.map(function(mark, i) {
-                                return (
-                                    <div key={"mark-"+i} className="col-lg-12">
-                                        {mark.content}
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
                 </div>
             </div>
         );
