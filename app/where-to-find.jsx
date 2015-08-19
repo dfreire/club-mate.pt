@@ -190,6 +190,23 @@ function getMarks(type, city) {
     return _marks;
 }
 
+function renderMarks(title, type, city) {
+    return (
+        <div className="row">
+            <div className="col-lg-12">
+                <h3>{title}</h3>
+            </div>
+            {getMarks(type, city).map(function(mark, i) {
+                return (
+                    <div key={"mark-"+i} className="col-lg-12">
+                        {mark.content}
+                    </div>
+                );
+            })}
+        </div>
+    );
+}
+
 function getKey(record) {
     return record.key;
 }
@@ -216,48 +233,9 @@ export var WhereToFind = React.createClass({
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <h3>Bares</h3>
-                            </div>
-                            {getMarks('bar', 'Porto').map(function(mark, i) {
-                                return (
-                                    <div key={"mark-"+i} className="col-lg-12">
-                                        {mark.content}
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <h3>Restaurantes</h3>
-                            </div>
-                            {getMarks('restaurant', 'Porto').map(function(mark, i) {
-                                return (
-                                    <div key={"mark-"+i} className="col-lg-12">
-                                        {mark.content}
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <h3>Mercearias</h3>
-                            </div>
-                            {getMarks('grocery', 'Porto').map(function(mark, i) {
-                                return (
-                                    <div key={"mark-"+i} className="col-lg-12">
-                                        {mark.content}
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
+                    <div className="col-lg-4">{renderMarks('Bares', 'bar', 'Porto')}</div>
+                    <div className="col-lg-4">{renderMarks('Restaurantes', 'restaurant', 'Porto')}</div>
+                    <div className="col-lg-4">{renderMarks('Mercearias', 'grocery', 'Porto')}</div>
                 </div>
                 <div style={{marginTop: 25}} className="row">
                     <div className="col-lg-12">
@@ -265,6 +243,9 @@ export var WhereToFind = React.createClass({
                     </div>
                 </div>
                 <div className="row">
+                    <div className="col-lg-4">{renderMarks('Bares', 'bar', 'Lisboa')}</div>
+                    <div className="col-lg-4">{renderMarks('Restaurantes', 'restaurant', 'Lisboa')}</div>
+                    <div className="col-lg-4">{renderMarks('Mercearias', 'grocery', 'Lisboa')}</div>
                 </div>
             </div>
         );
