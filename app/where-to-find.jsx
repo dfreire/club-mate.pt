@@ -3,6 +3,19 @@ import Router from "react-router";
 
 import Map from "./map.jsx";
 
+// Novos sítios em Lisboa
+//
+// Restaurantes
+//
+// Pizza a pezzi Merc. Ribeira
+// Avenida 24 de Julho, Cais do Sodré, Lisboa
+//
+// Mercearias
+//
+// Pizza a pezzi Parque Principe Real
+// Rua Dom Pedro V, 84
+// (PVP equivalente a mercearia)
+
 let Marks = [{
     type: "restaurant",
     key: "espacocompasso",
@@ -64,6 +77,16 @@ let Marks = [{
         lat: 41.1446968, lng: -8.6046485
     }
 }, {
+    type: "restaurant",
+    key: "7-maravilhas",
+    name: "7 Maravilhas",
+    addressLine1: "Rua das Taipas 17C",
+    addressLine2: "Porto",
+    city: "Porto",
+    position: {
+        lat: 41.1428726, lng: -8.6174815
+    }
+}, {
     type: "bar",
     key: "maus-habitos",
     name: "Maus Hábitos",
@@ -122,6 +145,26 @@ let Marks = [{
     city: "Porto",
     position: {
         lat: 41.1499998, lng: -8.6131836
+    }
+}, {
+    type: "bar",
+    key: "embaixada-lomografica",
+    name: "Embaixada Lomográfica",
+    addressLine1: "Praça de Carlos Alberto, 121",
+    addressLine2: "Porto",
+    city: "Porto",
+    position: {
+        lat: 41.1476609, lng: -8.6159161
+    }
+}, {
+    type: "bar",
+    key: "esad",
+    name: "ESAD",
+    addressLine1: "Av. Calouste Gulbenkian",
+    addressLine2: "4460-268 Sra. da Hora",
+    city: "Porto",
+    position: {
+        lat: 41.1847115, lng: -8.662153
     }
 }, {
     type: "grocery",
