@@ -212,7 +212,7 @@ let Marks = [{
     notes: "(PVP equivalente a mercearia)",
     city: "Lisboa",
     position: {
-        lat: 41.1432659, lng: -8.6095884
+        lat: 38.7159764, lng: -9.1467839
     }
 }];
 
