@@ -3,19 +3,6 @@ import Router from "react-router";
 
 import Map from "./map.jsx";
 
-// Novos sítios em Lisboa
-//
-// Restaurantes
-//
-// Pizza a pezzi Merc. Ribeira
-// Avenida 24 de Julho, Cais do Sodré, Lisboa
-//
-// Mercearias
-//
-// Pizza a pezzi Parque Principe Real
-// Rua Dom Pedro V, 84
-// (PVP equivalente a mercearia)
-
 let Marks = [{
     type: "restaurant",
     key: "espacocompasso",
@@ -203,6 +190,27 @@ let Marks = [{
     addressLine1: "Rua Saraiva Carvalho, 47",
     addressLine2: "4000-520 Porto",
     city: "Porto",
+    position: {
+        lat: 41.1432659, lng: -8.6095884
+    }
+}, {
+    type: "restaurant",
+    key: "pizza-a-pezzi-merc-ribeira",
+    name: "Pizza à Pezzi Merc. Ribeira",
+    addressLine1: "Avenida 24 de Julho, Cais do Sodré",
+    addressLine2: "Lisboa",
+    city: "Lisboa",
+    position: {
+        lat: 38.707062, lng: -9.145825
+    }
+}, {
+    type: "grocery",
+    key: "pizza-a-pezzi-principe-real",
+    name: "Pizza à Pezzi Príncipe Real",
+    addressLine1: "Rua Dom Pedro V, 84",
+    addressLine2: "Lisboa",
+    notes: "(PVP equivalente a mercearia)",
+    city: "Lisboa",
     position: {
         lat: 41.1432659, lng: -8.6095884
     }
