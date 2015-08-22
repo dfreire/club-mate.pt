@@ -223,9 +223,12 @@ _.each(Marks, function(mark) {
         <div key={mark.key}>
             <address id={mark.key}>
                 <strong>{mark.name}</strong><br />
-                <small>{mark.addressLine1}<br />
-                {mark.addressLine2}<br />
-                <a href={gmapsHref}>{gmapsCaption}</a><br /></small>
+                {function() {if (mark.notes !== undefined) {
+                    return (<small>{mark.notes}</small><br />);
+                }}()}
+                <small>{mark.addressLine1}<small><br />
+                <small>{mark.addressLine2}</small><br />
+                <small><a href={gmapsHref}>{gmapsCaption}</a></small><br />
             </address>
         </div>
     );
