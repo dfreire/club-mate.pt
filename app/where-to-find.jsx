@@ -224,11 +224,11 @@ _.each(Marks, function(mark) {
             <address id={mark.key}>
                 <strong>{mark.name}</strong><br />
                 {function() {if (mark.notes !== undefined) {
-                    return (<small>{mark.notes}</small><br />);
+                    return (<small>{mark.notes}<br /></small>);
                 }}()}
-                <small>{mark.addressLine1}<small><br />
-                <small>{mark.addressLine2}</small><br />
-                <small><a href={gmapsHref}>{gmapsCaption}</a></small><br />
+                <small>{mark.addressLine1}<br />
+                {mark.addressLine2}<br />
+                <a href={gmapsHref}>{gmapsCaption}</a></small>
             </address>
         </div>
     );
@@ -293,7 +293,7 @@ export var WhereToFind = React.createClass({
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-4">{renderMarks('Bares', 'bar', 'Lisboa')}</div>
+
                     <div className="col-lg-4">{renderMarks('Restaurantes', 'restaurant', 'Lisboa')}</div>
                     <div className="col-lg-4">{renderMarks('Mercearias', 'grocery', 'Lisboa')}</div>
                 </div>
@@ -301,3 +301,5 @@ export var WhereToFind = React.createClass({
         );
     }
 });
+
+// <div className="col-lg-4">{renderMarks('Bares', 'bar', 'Lisboa')}</div>
