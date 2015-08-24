@@ -175,7 +175,7 @@ let Marks = [{
     }
 }, {
     type: "grocery",
-    key: "rodela",
+    key: "mercearia-rodela",
     name: "Mercearia Rodela",
     addressLine1: "Praça Guilherme Gomes Fernandes, 66",
     addressLine2: "4050-294 Porto",
@@ -185,7 +185,7 @@ let Marks = [{
     }
 }, {
     type: "grocery",
-    key: "rodela2",
+    key: "mercearia-rodela-2",
     name: "Mercearia Rodela 2",
     addressLine1: "Rua Saraiva Carvalho, 47",
     addressLine2: "4000-520 Porto",
@@ -215,6 +215,8 @@ let Marks = [{
         lat: 38.7159764, lng: -9.1467839
     }
 }];
+
+Marks = _.sortBy(Marks, (mark) => { return mark.key });
 
 _.each(Marks, function(mark) {
     var gmapsCaption = mark.position.lat + ", " + mark.position.lng;
