@@ -214,6 +214,66 @@ let Marks = [{
     position: {
         lat: 38.7159764, lng: -9.1467839
     }
+}, {
+    type: "restaurant",
+    key: "mel-limao",
+    name: "Mel & Limão",
+    addressLine1: "Largo Pé da Cruz, 25",
+    addressLine2: "Faro",
+    city: "Resto",
+    position: {
+        lat: 37.015626, lng: -7.929619
+    }
+}, {
+    type: "restaurant",
+    key: "belos-aires",
+    name: "Belos Aires",
+    addressLine1: "Rua de Belmonte, 104",
+    addressLine2: "4050-600 Porto",
+    city: "Porto",
+    position: {
+        lat: 41.1425556, lng: -8.6172878
+    }
+}, {
+    type: "restaurant",
+    key: "pe-d-arroz",
+    name: "Pé d'Arroz",
+    addressLine1: "Rua do Godinho, 866",
+    addressLine2: "4450-029 Matosinhos",
+    city: "Porto",
+    position: {
+        lat: 41.184420, lng: -8.685054
+    }
+}, {
+    type: "grocery",
+    key: "eos",
+    name: "EOS",
+    addressLine1: "Rua de Santa Catarina, 1198",
+    addressLine2: "4000-447 Porto",
+    city: "Porto",
+    position: {
+        lat: 41.156807, lng: -8.604577
+    }
+}, {
+    type: "bar",
+    key: "atlas-hostel",
+    name: "Atlas Hostel",
+    addressLine1: "Rua Barão Viamonte, 59",
+    addressLine2: "2400-137 Leiria",
+    city: "Resto",
+    position: {
+        lat: 39.744716, lng: -8.809317
+    }
+}, {
+    type: "bar",
+    key: "belas-artes",
+    name: "Belas Artes",
+    addressLine1: "Av. Rodrigues de Freitas, 265",
+    addressLine2: "4049-021 Porto",
+    city: "Porto",
+    position: {
+        lat: 41.145765, lng: -8.600806
+    }
 }];
 
 Marks = _.sortBy(Marks, (mark) => { return mark.key });
@@ -271,7 +331,7 @@ export var WhereToFind = React.createClass({
             <div>
                 <div className="row">
                     <div className="col-lg-12">
-                        <h1>Onde Encontrar</h1>
+                        <h1>Onde Encontrar <small>(scroll down para ver lista)</small></h1>
                     </div>
                 </div>
                 <div className="row">
@@ -289,15 +349,25 @@ export var WhereToFind = React.createClass({
                     <div className="col-lg-4">{renderMarks('Restaurantes', 'restaurant', 'Porto')}</div>
                     <div className="col-lg-4">{renderMarks('Mercearias', 'grocery', 'Porto')}</div>
                 </div>
+
                 <div style={{marginTop: 25}} className="row">
                     <div className="col-lg-12">
                         <h1>Lisboa</h1>
                     </div>
                 </div>
                 <div className="row">
-
                     <div className="col-lg-4">{renderMarks('Restaurantes', 'restaurant', 'Lisboa')}</div>
                     <div className="col-lg-4">{renderMarks('Mercearias', 'grocery', 'Lisboa')}</div>
+                </div>
+
+                <div style={{marginTop: 25}} className="row">
+                    <div className="col-lg-12">
+                        <h1>Resto do País</h1>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-lg-4">{renderMarks('Bares', 'bar', 'Resto')}</div>
+                    <div className="col-lg-4">{renderMarks('Restaurantes', 'restaurant', 'Resto')}</div>
                 </div>
             </div>
         );
